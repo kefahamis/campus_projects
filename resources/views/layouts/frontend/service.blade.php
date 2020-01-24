@@ -6,16 +6,16 @@
 
 
 		<div class="col-md-4">
-			<h3>Lorem Ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Cursus vitae congue mauris rhoncus aenean vel elit. Odio ut enim blandit volutpat maecenas volutpat. Morbi tincidunt ornare massa eget egestas purus.</p>
+			<h3>Nanny Services</h3>
+			<p>Nannies are people who provide housework and are very involved in the children's lives. Babysitters are short-term caretakers who are typically hired to watch the children for a set period.</p>
 		</div>
 		<div class="col-md-4">
-			<h3>Lorem Ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Cursus vitae congue mauris rhoncus aenean vel elit. Odio ut enim blandit volutpat maecenas volutpat. Morbi tincidunt ornare massa eget egestas purus.</p>
+			<h3>Caregiver Services</h3>
+			<p>A caregiver is someone who is actively engaged in providing care and needs to another such as a chronically ill, disabled or aged family member or friend.</p>
 		</div>
 		<div class="col-md-4">
-			<h3>Lorem Ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Placerat orci nulla pellentesque dignissim enim sit amet. Cursus vitae congue mauris rhoncus aenean vel elit. Odio ut enim blandit volutpat maecenas volutpat. Morbi tincidunt ornare massa eget egestas purus.</p>
+			<h3>Laundry services</h3>
+			<p>Laundry services is the act of washing and ironing clothes and is done either by leave-in workers or leave-out workers.</p>
 		</div>
 	</div>
 	

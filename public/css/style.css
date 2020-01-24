@@ -112,3 +112,7 @@
   background: #ccc;
 }
 
+.slider-btn{
+  position: relative;
+  z-index: 100;
+}
