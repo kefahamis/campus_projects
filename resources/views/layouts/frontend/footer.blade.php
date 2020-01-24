@@ -20,7 +20,7 @@
           <div class="col-lg-4">
               <h3 class="footer-heading"><span>Contact</span></h3>
               <ul class="list-unstyled">
-                  <li><a href="#">Help Center</a></li>
+                  <li><a href="#">Help</a></li>
                   <li><a href="#">Support Community</a></li>
                   <li><a href="#">Press</a></li>
                   <li><a href="#">Share Your Story</a></li>

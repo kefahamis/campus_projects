@@ -14,7 +14,7 @@ class CreateUserReportsTable extends Migration
     public function up()
     {
         Schema::create('user_reports', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('name');
             $table->integer('worker_id')->unsigned();
             $table->foreign('worker_id')->references('id')->on('workers');

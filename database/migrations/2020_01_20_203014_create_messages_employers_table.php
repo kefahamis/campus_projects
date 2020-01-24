@@ -14,7 +14,7 @@ class CreateMessagesEmployersTable extends Migration
     public function up()
     {
         Schema::create('messages_employers', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('name');
             $table->integer('user_id')->unsigned();
             $table->integer('employer_id')->unsigned();
