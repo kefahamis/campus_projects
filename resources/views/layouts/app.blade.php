@@ -25,8 +25,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm custom_nav">
             <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Msaidizi') }}
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -34,9 +37,30 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+                       @guest
+                       <?php
+                       if(Route::has('login'))
+                        ?>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Home') }}</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('About us') }}</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Services ') }}</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Domestic Agencies ') }}</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Contact Us') }}</a>
+                        </li>
+                        @endif
+                        
 
                     </ul>
-
+                   
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -73,9 +97,9 @@
                 </div>
             </div>
         </nav>
-           @if (Auth::guest())
+<!--            @if (Auth::guest())
                   @include('layouts.frontend.menu')
-          @endif
+          @endif -->
 
 
         <main>

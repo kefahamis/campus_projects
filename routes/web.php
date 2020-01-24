@@ -17,19 +17,25 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('users', 'UsersController', [
-    'only' => ['auth.register', 'show']
-]);
+// Route::resource('users', 'UsersController', [
+//     'only' => ['auth.register', 'show']
+// ]);
 // Route::get('users', 'UsersController@index');
-Route::get('/home', 'HomeController@index')->name('home');
-Route::group(['middleware' => 'App\Http\Middleware\WorkerMiddleware'], function()
-    {
-        Route::match(['get', 'post'], '/workerOnlyPage/', 'HomeController@admin');
+ Route::get('/home', 'HomeController@index')->name('home');
+// Route::group(['middleware' => 'App\Http\Middleware\WorkerMiddleware'], function()
+//     {
+//         Route::match(['get', 'post'], '/workerOnlyPage/', 'HomeController@admin');
         
-});
+// });
 
-Route::group(['middleware' => 'App\Http\Middleware\EmployerMiddleware'], function()
-    {
-        Route::match(['get', 'post'], '/employeeOnlyPage/', 'HomeController@member');
+// Route::group(['middleware' => 'App\Http\Middleware\EmployerMiddleware'], function()
+//     {
+//         Route::match(['get', 'post'], '/employeeOnlyPage/', 'HomeController@member');
         
+// });
+Route::get('myusers', function () {
+
+    $petani = DB::table('users')->get();
+
+    return view('auth.register', ['myuser' => $myuser]);
 });

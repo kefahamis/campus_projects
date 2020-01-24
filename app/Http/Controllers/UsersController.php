@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -15,9 +16,9 @@ class UsersController extends Controller
     public function index()
     {
         //
-        $use = User::lists(['id','role_id']);
+        $users = User::all()->toArray();
 
-        return view('auth.register',['users'=> $use]);
+        return view('auth.register', compact('users'));
     }
 
     /**
