@@ -701,3 +701,15 @@ background: #504e4e;
 	background: #55ACEE;
 	color: white;
   }
+.app-container.expanded .content-container .side-menu {
+    width: 250px;
+}
+.app-container .content-container .side-menu {
+    overflow-y: auto;
+    z-index: 9999;
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    -webkit-transition: width .25s;
+    transition: width .25s;
+}

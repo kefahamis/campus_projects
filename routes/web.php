@@ -21,7 +21,7 @@ Auth::routes();
 //     'only' => ['auth.register', 'show']
 // ]);
 // Route::get('users', 'UsersController@index');
- Route::get('/home', 'HomeController@index')->name('home');
+ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 // Route::group(['middleware' => 'App\Http\Middleware\WorkerMiddleware'], function()
 //     {
 //         Route::match(['get', 'post'], '/workerOnlyPage/', 'HomeController@admin');
