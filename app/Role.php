@@ -10,7 +10,11 @@ class Role extends Model
         protected $fillable = [
         'type',
     ];
+  
 
+  public function users(){
+        return $this->belongsTo('App/User');
+    }
     public function workers(){
     	return $this->belongsTo('App/Worker');
     }
