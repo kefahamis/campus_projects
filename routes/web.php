@@ -16,26 +16,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
-// Route::resource('users', 'UsersController', [
-//     'only' => ['auth.register', 'show']
-// ]);
-// Route::get('users', 'UsersController@index');
- Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-// Route::group(['middleware' => 'App\Http\Middleware\WorkerMiddleware'], function()
-//     {
-//         Route::match(['get', 'post'], '/workerOnlyPage/', 'HomeController@admin');
-        
-// });
-
-// Route::group(['middleware' => 'App\Http\Middleware\EmployerMiddleware'], function()
-//     {
-//         Route::match(['get', 'post'], '/employeeOnlyPage/', 'HomeController@member');
-        
-// });
-Route::get('myusers', function () {
-
-    $petani = DB::table('users')->get();
-
-    return view('auth.register', ['myuser' => $myuser]);
-});
+Route::get('/lists','Auth\RegisterController@roles');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
+Route::get('/worker', 'WorkerController@index')->name('worker')->middleware('worker');
+Route::get('/employer', 'EmployerController@index')->name('employer')->middleware('employer');

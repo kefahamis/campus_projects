@@ -30,7 +30,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm custom_nav">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Msaidizi') }}
+                    <img alt="{{ config('app.name', 'Msaidizi') }}" src="{{ asset('images/Free_Sample_By_Wix.jpg')}}" width="50"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto site-nav">
                        @guest
                        <?php
                        if(Route::has('login'))
@@ -64,7 +64,7 @@
                     </ul>
                    
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto right-nav">
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

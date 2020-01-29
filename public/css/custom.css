@@ -1,12 +1,18 @@
-
-
+.site-nav .nav-item .nav-link{
+	color: hsl(0, 0%, 100%) !important;
+}
+.right-nav .nav-item .nav-link{
+	color: hsl(0, 0%, 100%);
+}
 .sl-slider-wrapper {
 	width: 100%;
 	height: 600px;
 	overflow: hidden;
 	position: relative;
 }
-
+.sl-slider-inner .sl-caption{
+    font-size: 16px;
+}
  .sl-slider h2,
  .sl-slider blockquote {
 	width: 80%;
@@ -18,11 +24,13 @@
 }
 
 .sl-slider h2 {
-	font-size: 100px;
-	text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+font-size: 38px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 62px 0 0;
 }
 .sl-slider blockquote {
-	font-size: 28px;
+	font-size: 16px;
 	padding-top: 10px;
 	font-weight: 300;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
@@ -712,4 +720,7 @@ background: #504e4e;
     height: 100%;
     -webkit-transition: width .25s;
     transition: width .25s;
+}
+.site-nav{
+	margin:0 auto; 
 }

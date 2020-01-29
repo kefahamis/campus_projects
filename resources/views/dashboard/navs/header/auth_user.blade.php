@@ -21,6 +21,7 @@
                 
                 {{ Auth::user()->name}}<span class="caret"></span>
               </a>
+              @if(Auth::user()->role_id==1)
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">    
                                    <a href="#" class="dropdown-item" >My Account</a>
                                    <a href="#" class="dropdown-item" >Settings</a>
@@ -34,6 +35,7 @@
                                         @csrf
                                     </form>
                                 </div>
+             @endif                   
                    
           </li>
         </ul>

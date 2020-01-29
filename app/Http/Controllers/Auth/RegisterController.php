@@ -66,7 +66,14 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'role_id'=>$data['role_id'],
             'password' => Hash::make($data['password']),
         ]);
     }
+public function roles(){
+    $roles = User::all();
+
+        return view('auth.register')->with(['roles'=>$roles]);
+}
+
 }

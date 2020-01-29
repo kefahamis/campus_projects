@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Role extends Model
 {
     //
@@ -13,7 +14,7 @@ class Role extends Model
   
 
   public function users(){
-        return $this->belongsTo('App/User');
+        return $this->belongsToMany('App/User');
     }
     public function workers(){
     	return $this->belongsTo('App/Worker');
@@ -21,4 +22,5 @@ class Role extends Model
         public function employers(){
     	return $this->belongsTo('App/Employer');
     }
+
 }
