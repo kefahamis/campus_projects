@@ -34,7 +34,7 @@
 							<div class="bg-img bg-img-4"></div>
 							<h2>Welcome to Msaidizi</h2>
 							<blockquote><p>Join thousands of Kenyans looking for workers and employment.Make finding a job or work easy with minimum effort.</blockquote>
-								<button class="btn slider-btn btn-danger">Learn more</button>
+								<center><button class="btn slider-btn btn-danger">Learn more</button></center>
 							</div>
 					</div>
 {{-- 					

@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/lists','Auth\RegisterController@roles');
+Route::get('/users','UsersController@register');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
 Route::get('/worker', 'WorkerController@index')->name('worker')->middleware('worker');

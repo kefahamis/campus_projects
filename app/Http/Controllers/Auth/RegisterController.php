@@ -28,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo;
 
     /**
      * Create a new controller instance.
@@ -66,7 +66,6 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'role_id'=>$data['role_id'],
             'password' => Hash::make($data['password']),
         ]);
     }
@@ -75,5 +74,28 @@ public function roles(){
 
         return view('auth.register')->with(['roles'=>$roles]);
 }
+
+public function redirectTo(){
+
+        switch(Auth::user()->role_id){
+
+        case 1:
+            $this->redirectTo = '/admin';
+            return $this->redirectTo;
+                break;
+            case 3:
+                    $this->redirectTo = '/worker';
+                return $this->redirectTo;
+                break;
+            case 2:
+                $this->redirectTo = '/employer';
+                return $this->redirectTo;
+                break;
+            default:
+                $this->redirectTo = '/login';
+                return $this->redirectTo; 
+
+                }   
+    }
 
 }

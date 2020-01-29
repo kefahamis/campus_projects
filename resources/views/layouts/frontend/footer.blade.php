@@ -47,7 +47,7 @@
             <div class="copyright">
                 <p>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright ©<script>document.write(new Date().getFullYear());</script>2020 All rights reserved 
+                    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved 
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     </p>
             </div>

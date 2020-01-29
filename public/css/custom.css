@@ -673,12 +673,14 @@ background: #504e4e;
 	color: #ccc;
 }
 .fa {
-	padding: 20px;
-	font-size: 30px;
-	width: 30px;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 50%;
+font-size: 30px;
+width: 40px;
+text-align: center;
+text-decoration: none;
+border-radius: 50%;
+height: 40px;
+padding: 13px;
+margin: 0 5px 0;
   }
   /* Add a hover effect if you want */
 .fa:hover {

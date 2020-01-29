@@ -18,6 +18,11 @@ class UsersController extends Controller
 
         return view('auth.register')->with(['roles'=>$roles]);
     }
+
+    public function register(){
+        $user = Auth::user();
+        return view('layouts.app')->with(['user'=>$user]);
+    }
      
     /**
      * Show the form for creating a new resource.
