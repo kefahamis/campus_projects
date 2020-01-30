@@ -21,13 +21,14 @@
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/slick.min.css') }}" rel="stylesheet">
                <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm custom_nav">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm custom_nav" id="navbar">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img alt="{{ config('app.name', 'Msaidizi') }}" src="{{ asset('images/Free_Sample_By_Wix.jpg')}}" width="50"/>
@@ -114,6 +115,37 @@
     <script type="text/javascript" src="{{ URL::asset('/js/jquery.ba-cond.min.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('/js/jquery.slitslider.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('/js/my_custom.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::asset('/js/slick.min.js') }}"></script>
+    <script>
+    
+$(document).ready(function() {
+  $(".testimonial-carousel").slick({
+    infinite: true,
+    slidesToShow: 1,
+    speed: 500,
+    slidesToScroll: 1,
+    centerMode: 1,
+    autoplaySpeed: 3e3,
+    autoplay: true,
+    arrows: true,
+    prevArrow: $(".testimonial-carousel-controls .prev"),
+    nextArrow: $(".testimonial-carousel-controls .next")
+  });
+});
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+    </script>
 
 </body>
 </html>
